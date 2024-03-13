@@ -1,0 +1,40 @@
+@import url('./styles/marquee.scss');
+@import url('./styles/header.scss');
+@import url('./styles/slider.scss');
+@import url('./styles/introductions.scss');
+@import url('./styles/accordion.scss');
+@import url('./styles/footer.scss');
+
+// Шрифт
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+body {
+
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+}
+
+ul {
+   list-style: none;
+}
+
+.container {
+   padding: 0 13px;
+}
+
+a,
+a:hover {
+   text-decoration: none;
+   color: inherit;
+}

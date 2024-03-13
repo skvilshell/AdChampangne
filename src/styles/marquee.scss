@@ -1,0 +1,36 @@
+@use './varabale.scss' as v;
+
+
+.marquee {
+   width: 100%;
+   background: v.$marquee_bg;
+   color: v.$white_text;
+   position: relative;
+   font-size: 14px;
+   overflow: hidden;
+
+   div {
+      display: flex;
+      gap: 10px;
+      width: 200%;
+      position: relative;
+   
+      overflow: hidden;
+
+      animation: marquee 5s linear infinite;
+
+      span {
+         text-transform: uppercase;
+      }
+   }
+}
+
+@keyframes marquee {
+   0% {
+      left: 0;
+   }
+
+   100% {
+      left: -100%;
+   }
+}

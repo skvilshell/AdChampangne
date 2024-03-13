@@ -1,0 +1,70 @@
+@use './varabale.scss' as v;
+
+.footer {
+   margin-top: 20px;
+   background: v.$purple;
+
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      color: v.$white_text;
+   }
+
+   .logo {
+      color: v.$white_text;
+      font-size: 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+   }
+
+   nav {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      gap: 12px;
+
+      a {
+         color: v.$white_text;
+         font-weight: lighter;
+         text-decoration: underline 1px;
+         font-style: italic;
+         text-underline-offset: 4px;
+      }
+   }
+
+
+   .info {
+      font-size: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      font-style: italic;
+
+      .text {
+         p {
+            text-align: center;
+         }
+
+         .more_info {
+            overflow: hidden;
+            max-height: 0;
+            transition: .2s ease all;
+         }
+      }
+
+      .read {
+         font-size: 8px;
+         font-style: italic;
+         background: transparent;
+         color: v.$white_text;
+         border: 1px solid v.$white_text;
+         border-radius: 50px;
+         padding: 6px 18px;
+      }
+   }
+}

@@ -1,0 +1,148 @@
+@use './varabale.scss' as v;
+
+.slider {
+   position: relative;
+   overflow: hidden;
+
+   .swiper-slide {
+      padding-top: 20px;
+
+      &.purple {
+         background: v.$purple;
+
+         .price {
+            color: v.$purple;
+
+            .old::before {
+               border-bottom-color: v.$purple;
+            }
+         }
+
+         .figure {
+            background: v.$dark_purple;
+         }
+      }
+
+      &.rose {
+         background: v.$rose;
+
+         .price {
+            color: v.$rose;
+
+            .old::before {
+               border-bottom-color: v.$rose;
+            }
+         }
+
+         .figure {
+            background: v.$dark_rose;
+         }
+      }
+
+      &.grey {
+         background: v.$grey;
+
+         .price {
+            color: v.$grey;
+
+            .old::before {
+               border-bottom-color: v.$grey;
+            }
+         }
+
+         .figure {
+            background: v.$dark_grey;
+         }
+      }
+
+   }
+
+   .swiper-pagination{
+      bottom: 30px;
+
+      .swiper-pagination-bullet-active{
+         background: v.$white_text;
+      }
+   }
+
+
+   header {
+      color: v.$white_text;
+
+      h1 {
+         font-size: 36px;
+      }
+
+      p {
+         font-weight: lighter;
+      }
+   }
+
+   .main {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 60px;
+
+
+      .price {
+         margin-top: 20px;
+         z-index: 5;
+         justify-items: start;
+         padding: 4px 15px;
+         background: v.$white_text;
+         font-size: 30px;
+         display: flex;
+         align-items: center;
+         gap: 29px;
+         border-radius: 10px;
+
+
+         .old {
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+            padding-right: 10px;
+
+            &::before {
+               top: 0;
+               content: "";
+               border-bottom: 1px solid;
+               position: absolute;
+               width: 100%;
+               height: 50%;
+               transform: rotate(-7deg);
+            }
+         }
+      }
+
+      .product_phone {
+         max-width: 363px;
+         max-height: 374px;
+         object-fit: contain;
+         object-position: center;
+         z-index: 5;
+         align-self: center;
+      }
+   }
+
+   .figure {
+      position: absolute;
+      z-index: 0;
+      height: 328px;
+      width: 170px;
+      transform: skewX(-30deg);
+   }
+
+   .figure_one {
+      left: 85px;
+      top: 0px;
+   }
+
+   .figure_two {
+      right: 0px;
+      bottom: 0px;
+   }
+}

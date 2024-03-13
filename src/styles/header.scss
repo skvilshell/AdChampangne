@@ -1,0 +1,97 @@
+@use './varabale.scss' as v;
+
+.header {
+  background: v.$purple;
+  color: v.$white_text;
+
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+  }
+
+  .menu {
+    transform: translate(100%);
+    transition: .5s ease all;
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    background: v.$white_text;
+    z-index: 100;
+
+    .header_menu {
+      color: v.$purple;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .burger_btn {
+        font-size: 17px;
+        color: #0021A1;
+      }
+
+    }
+
+    &.active {
+      transform: translate(0);
+      transition: .5s ease all;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        color: v.$grey_text;
+        font-weight: bold;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 15px;
+          border-radius: 10px;
+
+          &:hover {
+            background: #dbdbdb;
+          }
+        }
+      }
+    }
+  }
+
+  .burger_btn {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
